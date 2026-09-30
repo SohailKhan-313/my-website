@@ -2,6 +2,8 @@
 
 A modern, high-performance developer portfolio built with **React**, **Vite**, and **Vanilla CSS**. Engineered specifically for elite software engineers, architects, and technical leaders who value clean architecture, rapid customization, and rich visual aesthetics.
 
+🌐 **Live Website**: [https://sohailkhan313.netlify.app/](https://sohailkhan313.netlify.app/)
+
 ---
 
 ## ⚡ Quick Start
