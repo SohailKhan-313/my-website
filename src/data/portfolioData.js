@@ -71,7 +71,7 @@ export const portfolioData = {
   // ---------------------------------------------------------------------------
   stats: [
     { value: "2", label: "Years Experience", description: "Hands-on full-stack development" },
-    { value: "5+", label: "Key Projects", description: "Production & practical applications" },
+    { value: "6+", label: "Key Projects", description: "Production & practical applications" },
     { value: "2", label: "Core Stacks", description: "Laravel PHP & MERN Stack" },
     { value: "100%", label: "Dedication", description: "Clean code & on-time delivery" }
   ],
@@ -127,7 +127,7 @@ export const portfolioData = {
   // ---------------------------------------------------------------------------
   // 5. REAL PROJECTS & LIVE DEPLOYMENTS
   // ---------------------------------------------------------------------------
-  projectCategories: ["All", "Laravel & PHP", "MERN Stack", "React & APIs"],
+  projectCategories: ["All", "Laravel & PHP", "MERN Stack", "React & APIs", "Full Stack"],
   projects: [
     {
       id: "hms-portal",
@@ -146,6 +146,26 @@ export const portfolioData = {
         "Patient registration and medical history management",
         "Doctor appointment scheduling and status updates",
         "Live production deployment hosted on Railway Cloud"
+      ]
+    },
+    {
+      id: "school-management-system",
+      title: "School Management System & Academic Portal",
+      category: "Laravel & PHP",
+      subtitle: "Comprehensive academic ERP for student enrollment, attendance tracking, grade reporting, and fee management.",
+      description: "Architected a full-featured School Management System engineered to digitize school administration and classroom operations. Features dedicated role-based portals for administrators, teachers, parents, and students, with modules for course schedules, daily attendance records, exam grade cards, and fee receipt generation.",
+      impact: "Streamlines institutional workflow, digitizes report card distribution, and reduces record lookup times by over 80%.",
+      image: "/images/project-school.jpg",
+      tags: ["Laravel", "PHP", "MySQL", "JavaScript", "Bootstrap", "Blade"],
+      liveUrl: "https://github.com/SohailKhan-313",
+      githubUrl: "https://github.com/SohailKhan-313",
+      featured: true,
+      features: [
+        "Role-based dashboards for School Admins, Teachers, Parents, and Students",
+        "Student enrollment, class allocations, and profile management",
+        "Daily attendance tracking with automated absence alerts and analytics",
+        "Exam scheduling, mark sheets, and printable report card generation",
+        "Fee collection tracker with payment receipts and billing history"
       ]
     },
     {
@@ -239,7 +259,7 @@ export const portfolioData = {
       description: "Designing, building, and deploying real-world web applications for clients and personal initiatives.",
       achievements: [
         "Architected and deployed a multi-tier Hospital Management System (HMS) live on Railway Cloud with role-based portal access.",
-        "Built responsive, modern web applications including a live Weather app (Netlify), Property Advertisement portal, and Restaurant system.",
+        "Built responsive, modern web applications including a live Weather app (Netlify), School Management System, Property Advertisement portal, and Restaurant system.",
         "Constructed clean, secure RESTful APIs using Laravel (PHP) and Node.js/Express, integrated with MySQL and MongoDB.",
         "Maintained complete codebases using Git version control and handled cloud deployments on Railway and Netlify."
       ],
