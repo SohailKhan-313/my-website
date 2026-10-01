@@ -26,7 +26,7 @@ export const portfolioData = {
     yearsOfExperience: 2,
     headlineHighlights: [
       "Specialized in Laravel (PHP), MySQL & MERN Stack (React, Node, Express, MongoDB)",
-      "Engineered & deployed production systems including Hospital Management (HMS) on Railway",
+      "Engineered & deployed production systems including Hospital Management (HMS) & School Portal on Railway",
       "Focused on clean MVC architecture, secure RESTful APIs, and responsive user interfaces"
     ],
     bio: [
@@ -154,10 +154,10 @@ export const portfolioData = {
       category: "Laravel & PHP",
       subtitle: "Comprehensive academic ERP for student enrollment, attendance tracking, grade reporting, and fee management.",
       description: "Architected a full-featured School Management System engineered to digitize school administration and classroom operations. Features dedicated role-based portals for administrators, teachers, parents, and students, with modules for course schedules, daily attendance records, exam grade cards, and fee receipt generation.",
-      impact: "Streamlines institutional workflow, digitizes report card distribution, and reduces record lookup times by over 80%.",
+      impact: "Live in production on Railway cloud with role-based portal access, digital report cards, and real-time records.",
       image: "/images/project-school.jpg",
       tags: ["Laravel", "PHP", "MySQL", "JavaScript", "Bootstrap", "Blade"],
-      liveUrl: "https://github.com/SohailKhan-313",
+      liveUrl: "https://cms-school-based-production.up.railway.app",
       githubUrl: "https://github.com/SohailKhan-313",
       featured: true,
       features: [
@@ -165,7 +165,8 @@ export const portfolioData = {
         "Student enrollment, class allocations, and profile management",
         "Daily attendance tracking with automated absence alerts and analytics",
         "Exam scheduling, mark sheets, and printable report card generation",
-        "Fee collection tracker with payment receipts and billing history"
+        "Fee collection tracker with payment receipts and billing history",
+        "Live production deployment hosted on Railway Cloud"
       ]
     },
     {
@@ -258,7 +259,7 @@ export const portfolioData = {
       type: "Full-Stack Engineer",
       description: "Designing, building, and deploying real-world web applications for clients and personal initiatives.",
       achievements: [
-        "Architected and deployed a multi-tier Hospital Management System (HMS) live on Railway Cloud with role-based portal access.",
+        "Architected and deployed production systems including Hospital Management (HMS) and School Portal live on Railway Cloud with role-based portal access.",
         "Built responsive, modern web applications including a live Weather app (Netlify), School Management System, Property Advertisement portal, and Restaurant system.",
         "Constructed clean, secure RESTful APIs using Laravel (PHP) and Node.js/Express, integrated with MySQL and MongoDB.",
         "Maintained complete codebases using Git version control and handled cloud deployments on Railway and Netlify."
@@ -311,7 +312,7 @@ export const portfolioData = {
     },
     {
       question: "Can I inspect the live demos and code of your projects?",
-      answer: "Absolutely! The Hospital Management System (HMS) is live on Railway, the Weather App is live on Netlify, and the repositories are accessible on my GitHub profile."
+      answer: "Absolutely! The Hospital Management System (HMS) and School Management System are live on Railway, the Weather App is live on Netlify, and the repositories are accessible on my GitHub profile."
     }
   ]
 };
