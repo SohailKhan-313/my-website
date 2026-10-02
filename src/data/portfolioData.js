@@ -196,15 +196,16 @@ export const portfolioData = {
       description: "Developed a property advertisement web application allowing users to browse, filter, and post residential and commercial property listings with pricing, specifications, and direct agent inquiries.",
       impact: "Engineered high-performance relational database schemas for listings, categories, and contact leads.",
       image: "/images/project-fintech.jpg",
-      tags: ["Laravel", "PHP", "React", "MySQL", "Tailwind CSS"],
-      liveUrl: "https://github.com/SohailKhan-313",
+      tags: ["Laravel", "PHP", "React", "MySQL", "Tailwind CSS", "Netlify"],
+      liveUrl: "https://propertyadvatisment.netlify.app/",
       githubUrl: "https://github.com/SohailKhan-313",
       featured: true,
       features: [
         "Property filtering by location, price range, and property type",
         "Seller listing dashboard with image uploads and specifications",
         "Direct inquiry connection between buyers and listing owners",
-        "Responsive grid design optimized for mobile and desktop"
+        "Responsive grid design optimized for mobile and desktop",
+        "Live production deployment hosted on Netlify"
       ]
     },
     {
