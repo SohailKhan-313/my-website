@@ -35,6 +35,18 @@ export const Hero = ({ personal, socialLinks, stats }) => {
               </a>
 
               <a
+                href={personal.resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary"
+                download="Sohail_Khan_CV.pdf"
+                title="Download Professional CV (PDF)"
+              >
+                <Icon name="download" size={18} />
+                Download CV
+              </a>
+
+              <a
                 href={personal.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -42,7 +54,7 @@ export const Hero = ({ personal, socialLinks, stats }) => {
                 style={{ borderColor: 'rgba(37, 211, 102, 0.4)' }}
               >
                 <Icon name="whatsapp" size={18} style={{ color: '#25d366' }} />
-                Chat on WhatsApp
+                WhatsApp
               </a>
             </div>
 

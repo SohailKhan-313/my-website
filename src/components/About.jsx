@@ -40,6 +40,20 @@ export const About = ({ personal }) => {
                 ))}
               </ul>
             </div>
+
+            <div style={{ marginTop: '1.25rem' }}>
+              <a
+                href={personal.resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary"
+                download="Sohail_Khan_CV.pdf"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
+              >
+                <Icon name="download" size={18} />
+                Download Full CV (PDF)
+              </a>
+            </div>
           </div>
 
           {/* Right Column: Fast Facts Cards */}

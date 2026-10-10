@@ -22,7 +22,7 @@ export const portfolioData = {
     whatsapp: "+92 347 0232059",
     whatsappUrl: "https://wa.me/923470232059",
     avatar: "/images/avatar.jpg",
-    resumeUrl: "#contact",
+    resumeUrl: "/Sohail_Khan_CV.pdf",
     yearsOfExperience: 2,
     headlineHighlights: [
       "Specialized in Laravel (PHP), MySQL & MERN Stack (React, Node, Express, MongoDB)",

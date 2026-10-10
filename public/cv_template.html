@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sohail Khan - Full-Stack Developer CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* =============================================================
+       PAGE & PRINT SETUP (STRICT 2-PAGE A4 LAYOUT)
+       ============================================================= */
+    @page {
+      size: A4 portrait;
+      margin: 10mm 12mm 10mm 12mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 9pt;
+      line-height: 1.4;
+      color: #1e293b;
+      background: #ffffff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    a {
+      color: #1d4ed8;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .page {
+      position: relative;
+      background: #ffffff;
+      height: 277mm;
+      max-height: 277mm;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-break {
+      page-break-before: always;
+    }
+
+    /* =============================================================
+       HEADER (PAGE 1)
+       ============================================================= */
+    .header {
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 8px;
+      margin-bottom: 9px;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 4px;
+    }
+
+    .name-role h1 {
+      font-size: 22pt;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+      color: #0f172a;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .name-role .title-sub {
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: #1d4ed8;
+      letter-spacing: 0.2px;
+      margin-top: 2px;
+    }
+
+    .badge-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #ecfdf5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 7.2pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .badge-status-dot {
+      width: 6px;
+      height: 6px;
+      background: #10b981;
+      border-radius: 50%;
+    }
+
+    /* Contact Links */
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px 14px;
+      margin-top: 6px;
+      padding-top: 6px;
+      border-top: 1px dashed #cbd5e1;
+      font-size: 8.2pt;
+      color: #475569;
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .contact-item svg {
+      width: 11px;
+      height: 11px;
+      color: #2563eb;
+      flex-shrink: 0;
+    }
+
+    .contact-item a {
+      color: #334155;
+    }
+
+    .contact-item a:hover {
+      color: #1d4ed8;
+      text-decoration: underline;
+    }
+
+    /* =============================================================
+       SECTION COMMONS
+       ============================================================= */
+    .section {
+      margin-bottom: 9px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 9.6pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: #0f172a;
+      margin-bottom: 6px;
+      padding-bottom: 3px;
+      border-bottom: 1.5px solid #e2e8f0;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -1.5px;
+      width: 36px;
+      height: 1.5px;
+      background: #2563eb;
+    }
+
+    .section-title svg {
+      width: 13px;
+      height: 13px;
+      color: #2563eb;
+    }
+
+    /* Summary */
+    .summary-text {
+      font-size: 8.8pt;
+      color: #334155;
+      line-height: 1.48;
+      text-align: justify;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 10px;
+    }
+
+    .skill-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      padding: 5px 8px;
+    }
+
+    .skill-cat-title {
+      font-size: 8.2pt;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 3px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .skill-cat-title svg {
+      width: 11px;
+      height: 11px;
+      color: #2563eb;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5px 4.5px;
+    }
+
+    .skill-pill {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-size: 7.5pt;
+      color: #1e293b;
+      font-weight: 500;
+    }
+
+    .skill-pill.highlight {
+      background: #eff6ff;
+      border-color: #bfdbfe;
+      color: #1d4ed8;
+      font-weight: 600;
+    }
+
+    /* Experience */
+    .exp-item {
+      background: #ffffff;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .exp-role {
+      font-size: 9.3pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .exp-company {
+      font-size: 8.6pt;
+      font-weight: 600;
+      color: #2563eb;
+    }
+
+    .exp-period {
+      font-size: 8pt;
+      font-weight: 600;
+      color: #475569;
+      background: #f1f5f9;
+      padding: 1px 6px;
+      border-radius: 4px;
+    }
+
+    .exp-location {
+      font-size: 7.8pt;
+      color: #64748b;
+      margin-bottom: 4px;
+    }
+
+    .bullet-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .bullet-list li {
+      position: relative;
+      padding-left: 12px;
+      margin-bottom: 3.5px;
+      font-size: 8.5pt;
+      color: #334155;
+      line-height: 1.4;
+    }
+
+    .bullet-list li::before {
+      content: '▪';
+      position: absolute;
+      left: 0;
+      top: -1px;
+      color: #2563eb;
+      font-size: 9.5pt;
+    }
+
+    /* Core Highlights Banner (Bottom of Page 1) */
+    .highlights-banner {
+      margin-top: auto;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 5px;
+      padding: 6px 10px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .banner-stat {
+      text-align: center;
+      border-right: 1px solid #e2e8f0;
+    }
+
+    .banner-stat:last-child {
+      border-right: none;
+    }
+
+    .banner-stat-value {
+      font-size: 11pt;
+      font-weight: 800;
+      color: #1d4ed8;
+      line-height: 1.1;
+    }
+
+    .banner-stat-label {
+      font-size: 7.2pt;
+      font-weight: 600;
+      color: #475569;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    /* =============================================================
+       PAGE 2: 6 PRODUCTION PROJECTS IN 2-COLUMN GRID
+       ============================================================= */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px 10px;
+      margin-bottom: 9px;
+    }
+
+    .project-card {
+      border: 1px solid #e2e8f0;
+      border-left: 3px solid #2563eb;
+      border-radius: 4px;
+      padding: 5.5px 8px;
+      background: #fdfdfd;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-card:nth-child(even) {
+      border-left-color: #0284c7;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 2px;
+    }
+
+    .project-title {
+      font-size: 8.7pt;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.2;
+    }
+
+    .project-cat-badge {
+      font-size: 6.8pt;
+      font-weight: 600;
+      background: #f1f5f9;
+      color: #475569;
+      padding: 0.8px 4.5px;
+      border-radius: 3px;
+      border: 1px solid #e2e8f0;
+      white-space: nowrap;
+      margin-top: 1px;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      margin-top: 2px;
+      margin-bottom: 3px;
+    }
+
+    .link-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 2.5px;
+      padding: 1px 5px;
+      border-radius: 3px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: #1d4ed8;
+      font-size: 7.2pt;
+      font-weight: 600;
+    }
+
+    .link-pill.github {
+      background: #f8fafc;
+      border-color: #cbd5e1;
+      color: #334155;
+    }
+
+    .link-pill svg {
+      width: 8px;
+      height: 8px;
+    }
+
+    .project-desc {
+      font-size: 7.8pt;
+      color: #334155;
+      line-height: 1.34;
+      margin-bottom: 3px;
+    }
+
+    .project-bullets {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 3px;
+    }
+
+    .project-bullets li {
+      position: relative;
+      padding-left: 10px;
+      margin-bottom: 1.5px;
+      font-size: 7.6pt;
+      color: #475569;
+      line-height: 1.32;
+    }
+
+    .project-bullets li::before {
+      content: '›';
+      position: absolute;
+      left: 1px;
+      top: -2px;
+      color: #2563eb;
+      font-weight: bold;
+      font-size: 8.5pt;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5px;
+      margin-top: 2px;
+      padding-top: 2.5px;
+      border-top: 1px dashed #e2e8f0;
+    }
+
+    .tag-badge {
+      background: #f1f5f9;
+      padding: 0.8px 4px;
+      border-radius: 2px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 6.8pt;
+      color: #334155;
+    }
+
+    /* Bottom Info Grid (Page 2) */
+    .bottom-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 8px;
+      margin-top: auto;
+    }
+
+    .info-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      padding: 6px 9px;
+    }
+
+    .info-card-title {
+      font-size: 8.2pt;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 3px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .info-card-title svg {
+      width: 11px;
+      height: 11px;
+      color: #2563eb;
+    }
+
+    .info-card p {
+      font-size: 7.9pt;
+      color: #475569;
+      line-height: 1.36;
+    }
+
+    .lang-row {
+      display: flex;
+      gap: 5px;
+      margin-top: 3px;
+    }
+
+    .lang-chip {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 1.5px 6px;
+      border-radius: 3px;
+      font-size: 7.4pt;
+      color: #334155;
+    }
+
+    .lang-chip strong {
+      color: #0f172a;
+    }
+
+    .cv-footer {
+      text-align: center;
+      margin-top: 6px;
+      font-size: 7pt;
+      color: #94a3b8;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 3px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       PAGE 1: HEADER, SUMMARY, SKILLS, EXPERIENCE
+       ============================================================ -->
+  <div class="page">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-top">
+        <div class="name-role">
+          <h1>Sohail Khan</h1>
+          <div class="title-sub">Full-Stack Developer (Laravel PHP &amp; MERN Stack)</div>
+        </div>
+        <div>
+          <div class="badge-status">
+            <span class="badge-status-dot"></span>
+            Available for Roles
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Bar with Clickable Hyperlinks -->
+      <div class="contact-bar">
+        <span class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Dera Ismail Khan, Pakistan
+        </span>
+        <span class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+          <a href="mailto:skpattan850911@gmail.com">skpattan850911@gmail.com</a>
+        </span>
+        <span class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <a href="https://wa.me/923470232059">+92 347 0232059</a>
+        </span>
+        <span class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <a href="https://my-website-sk-8b08.vercel.app/" target="_blank"><strong>my-website-sk-8b08.vercel.app</strong></a>
+        </span>
+        <span class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          <a href="https://www.linkedin.com/in/sohail-khan-88b201375" target="_blank">linkedin.com/in/sohail-khan-88b201375</a>
+        </span>
+        <span class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          <a href="https://github.com/SohailKhan-313" target="_blank">github.com/SohailKhan-313</a>
+        </span>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section class="section">
+      <h2 class="section-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        Professional Summary
+      </h2>
+      <p class="summary-text">
+        Proactive, results-oriented <strong>Full-Stack Developer</strong> with nearly <strong>2 years of practical experience</strong> architecting, developing, and deploying robust web applications and RESTful APIs. Specialized in engineering secure backend architectures using <strong>Laravel &amp; PHP</strong> with relational <strong>MySQL</strong> schemas, complemented by modern reactive client interfaces built with <strong>React.js</strong> and the <strong>MERN Stack (MongoDB, Express, React, Node.js)</strong>. Demonstrated success shipping production-grade clinical portals (HMS), school enterprise ERPs, and restaurant POS applications live on <strong>Railway Cloud</strong>, <strong>Vercel</strong>, and <strong>Netlify</strong>. Committed to clean MVC architecture, role-based access control (RBAC), and high-availability digital solutions.
+      </p>
+    </section>
+
+    <!-- Technical Skills Matrix -->
+    <section class="section">
+      <h2 class="section-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+        Technical Skills &amp; Core Competencies
+      </h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-cat-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+            Backend &amp; Server Architecture (Laravel &amp; PHP)
+          </div>
+          <div class="skill-tags">
+            <span class="skill-pill highlight">Laravel Framework</span>
+            <span class="skill-pill highlight">Core PHP</span>
+            <span class="skill-pill">RESTful API Design</span>
+            <span class="skill-pill">Role-Based Access (RBAC)</span>
+            <span class="skill-pill">Eloquent ORM</span>
+            <span class="skill-pill">Blade Templating</span>
+            <span class="skill-pill">Middleware &amp; Auth</span>
+            <span class="skill-pill">MVC Patterns</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-cat-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            Frontend Engineering (React &amp; Modern Web)
+          </div>
+          <div class="skill-tags">
+            <span class="skill-pill highlight">React.js</span>
+            <span class="skill-pill highlight">JavaScript (ES6+)</span>
+            <span class="skill-pill">HTML5 &amp; Modern CSS3</span>
+            <span class="skill-pill">Tailwind CSS</span>
+            <span class="skill-pill">Bootstrap</span>
+            <span class="skill-pill">Responsive Mobile-First UI</span>
+            <span class="skill-pill">State Management</span>
+            <span class="skill-pill">SPA Architecture</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-cat-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16.5 9.4 7.55 4.24a1.78 1.78 0 0 0-2.5 1.55v12.42a1.78 1.78 0 0 0 2.5 1.55L16.5 14.6a1.78 1.78 0 0 0 0-3.2z"></path></svg>
+            MERN Stack &amp; Node.js Ecosystem
+          </div>
+          <div class="skill-tags">
+            <span class="skill-pill highlight">Node.js</span>
+            <span class="skill-pill highlight">Express.js</span>
+            <span class="skill-pill highlight">MongoDB &amp; Mongoose</span>
+            <span class="skill-pill">RESTful Endpoints</span>
+            <span class="skill-pill">CRUD API Design</span>
+            <span class="skill-pill">Asynchronous Programming</span>
+            <span class="skill-pill">Axios / Fetch</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-cat-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            Databases, Cloud &amp; Tooling
+          </div>
+          <div class="skill-tags">
+            <span class="skill-pill highlight">MySQL (Relational Schema)</span>
+            <span class="skill-pill highlight">Railway Cloud</span>
+            <span class="skill-pill highlight">Vercel</span>
+            <span class="skill-pill highlight">Netlify</span>
+            <span class="skill-pill">Git &amp; GitHub</span>
+            <span class="skill-pill">Postman API Testing</span>
+            <span class="skill-pill">Environment Secrets</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section class="section">
+      <h2 class="section-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+        Work Experience &amp; Engineering Timeline
+      </h2>
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <span class="exp-role">Full-Stack Developer (Laravel &amp; MERN Stack)</span>
+            <span style="color: #64748b;"> | </span>
+            <span class="exp-company">Software Development &amp; Client Projects</span>
+          </div>
+          <div class="exp-period">2023 – Present (Almost 2 Years)</div>
+        </div>
+        <div class="exp-location">Dera Ismail Khan, Pakistan • Remote &amp; Freelance Development</div>
+        <ul class="bullet-list">
+          <li><strong>Architected &amp; Deployed Enterprise Systems Live:</strong> Engineered production systems from concept to release, including Hospital Management (HMS), Restaurant Management (RMS), and School Portals with high-availability hosting on <strong>Railway Cloud</strong>.</li>
+          <li><strong>Engineered Role-Based Access Control (RBAC):</strong> Developed secure multi-tiered authentication workflows separating Administrative, Doctor, Teacher, Student, and Staff roles with custom middleware and session validation.</li>
+          <li><strong>Constructed Resilient RESTful APIs:</strong> Designed performant APIs using Laravel (PHP) and Node.js/Express, ensuring sanitized input handling, token-based verification, and optimized database queries across MySQL and MongoDB.</li>
+          <li><strong>Crafted Fast, Responsive Frontends:</strong> Built dynamic user interfaces with React.js, Tailwind CSS, and Blade templating, delivering sub-second response times and seamless mobile/desktop cross-browser compatibility.</li>
+          <li><strong>Managed Continuous Cloud Deployments:</strong> Maintained codebases via Git/GitHub version control, configuring environment variables, custom routing, and zero-downtime releases on Railway, Vercel, and Netlify.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Quick Highlights Banner -->
+    <div class="highlights-banner">
+      <div class="banner-stat">
+        <div class="banner-stat-value">2 Years</div>
+        <div class="banner-stat-label">Engineering Experience</div>
+      </div>
+      <div class="banner-stat">
+        <div class="banner-stat-value">6 Projects</div>
+        <div class="banner-stat-label">Live Production Deployed</div>
+      </div>
+      <div class="banner-stat">
+        <div class="banner-stat-value">Railway &amp; Vercel</div>
+        <div class="banner-stat-label">Cloud Deployment Verified</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 2: 6 PRODUCTION PROJECTS (2-COLUMN GRID) & EDUCATION
+       ============================================================ -->
+  <div class="page page-break">
+    <!-- Featured Projects Section -->
+    <section class="section">
+      <h2 class="section-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        Featured Production Systems &amp; Live Deployments
+      </h2>
+
+      <!-- 6 Projects in 2x3 Grid -->
+      <div class="projects-grid">
+
+        <!-- 1. Hospital Management System (HMS) -->
+        <div class="project-card">
+          <div>
+            <div class="project-header">
+              <span class="project-title">Hospital Management System (HMS)</span>
+              <span class="project-cat-badge">Enterprise Portal</span>
+            </div>
+            <div class="project-links">
+              <a href="https://hms-production-2e9b.up.railway.app/login" target="_blank" class="link-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Live App (Railway)
+              </a>
+              <a href="https://github.com/SohailKhan-313" target="_blank" class="link-pill github">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                GitHub
+              </a>
+            </div>
+            <p class="project-desc">
+              Clinical operating platform with multi-role access for Admins, Doctors, and Reception Staff.
+            </p>
+            <ul class="project-bullets">
+              <li>Engineered appointment scheduling, digital medical records, and billing ledger.</li>
+              <li>Live in production on Railway Cloud with secure relational database schemas.</li>
+            </ul>
+          </div>
+          <div class="project-tags">
+            <span class="tag-badge">Laravel</span>
+            <span class="tag-badge">PHP</span>
+            <span class="tag-badge">MySQL</span>
+            <span class="tag-badge">Railway</span>
+            <span class="tag-badge">REST API</span>
+          </div>
+        </div>
+
+        <!-- 2. Restaurant Management System (RMS) -->
+        <div class="project-card">
+          <div>
+            <div class="project-header">
+              <span class="project-title">Restaurant Management System (RMS)</span>
+              <span class="project-cat-badge">Operations &amp; POS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://rms-production-4975.up.railway.app" target="_blank" class="link-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Live App (Railway)
+              </a>
+              <a href="https://github.com/SohailKhan-313" target="_blank" class="link-pill github">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                GitHub
+              </a>
+            </div>
+            <p class="project-desc">
+              All-in-one restaurant system managing dining tables, live kitchen tickets (KOT), and billing.
+            </p>
+            <ul class="project-bullets">
+              <li>Digital food menus with dynamic categories, pricing, and table reservation tracking.</li>
+              <li>Order generation, automatic invoice calculation, and sales monitoring dashboard.</li>
+            </ul>
+          </div>
+          <div class="project-tags">
+            <span class="tag-badge">Laravel</span>
+            <span class="tag-badge">PHP</span>
+            <span class="tag-badge">MySQL</span>
+            <span class="tag-badge">Railway</span>
+            <span class="tag-badge">REST APIs</span>
+          </div>
+        </div>
+
+        <!-- 3. School Management System -->
+        <div class="project-card">
+          <div>
+            <div class="project-header">
+              <span class="project-title">School Management System &amp; ERP</span>
+              <span class="project-cat-badge">Academic ERP</span>
+            </div>
+            <div class="project-links">
+              <a href="https://cms-school-based-production.up.railway.app" target="_blank" class="link-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Live App (Railway)
+              </a>
+              <a href="https://github.com/SohailKhan-313" target="_blank" class="link-pill github">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                GitHub
+              </a>
+            </div>
+            <p class="project-desc">
+              Comprehensive academic ERP digitizing school administration across 4 role-based portals.
+            </p>
+            <ul class="project-bullets">
+              <li>Role-based dashboards for Admins, Teachers, Parents, and Students with attendance analytics.</li>
+              <li>Exam mark sheets, printable report cards, and student fee collection history.</li>
+            </ul>
+          </div>
+          <div class="project-tags">
+            <span class="tag-badge">Laravel</span>
+            <span class="tag-badge">PHP</span>
+            <span class="tag-badge">MySQL</span>
+            <span class="tag-badge">Railway</span>
+            <span class="tag-badge">Bootstrap</span>
+          </div>
+        </div>
+
+        <!-- 4. Modern Notes Application -->
+        <div class="project-card">
+          <div>
+            <div class="project-header">
+              <span class="project-title">Modern Notes Application</span>
+              <span class="project-cat-badge">MERN Stack</span>
+            </div>
+            <div class="project-links">
+              <a href="https://notes-app-mocha-gamma.vercel.app/" target="_blank" class="link-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Live App (Vercel)
+              </a>
+              <a href="https://github.com/SohailKhan-313" target="_blank" class="link-pill github">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                GitHub
+              </a>
+            </div>
+            <p class="project-desc">
+              Distraction-free digital notepad with real-time text note capture, tags, and search.
+            </p>
+            <ul class="project-bullets">
+              <li>Instant note CRUD, live search-as-you-type, and responsive minimalist interface.</li>
+              <li>Live in production on Vercel with RESTful Node/Express endpoints &amp; MongoDB storage.</li>
+            </ul>
+          </div>
+          <div class="project-tags">
+            <span class="tag-badge">React</span>
+            <span class="tag-badge">Node.js</span>
+            <span class="tag-badge">Express</span>
+            <span class="tag-badge">MongoDB</span>
+            <span class="tag-badge">Vercel</span>
+          </div>
+        </div>
+
+        <!-- 5. Weather Forecast Application -->
+        <div class="project-card">
+          <div>
+            <div class="project-header">
+              <span class="project-title">Weather Forecast Application</span>
+              <span class="project-cat-badge">React &amp; Live API</span>
+            </div>
+            <div class="project-links">
+              <a href="https://wheatherappsohail.netlify.app/" target="_blank" class="link-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Live App (Netlify)
+              </a>
+              <a href="https://github.com/SohailKhan-313" target="_blank" class="link-pill github">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                GitHub
+              </a>
+            </div>
+            <p class="project-desc">
+              Interactive weather analytics dashboard connecting to live meteorological REST APIs.
+            </p>
+            <ul class="project-bullets">
+              <li>Instant city search, temperature metrics, humidity, and dynamic condition icons.</li>
+              <li>Live in production on Netlify with sub-second API fetch response.</li>
+            </ul>
+          </div>
+          <div class="project-tags">
+            <span class="tag-badge">React</span>
+            <span class="tag-badge">JavaScript</span>
+            <span class="tag-badge">Weather API</span>
+            <span class="tag-badge">CSS3</span>
+            <span class="tag-badge">Netlify</span>
+          </div>
+        </div>
+
+        <!-- 6. Property Advertisement Application -->
+        <div class="project-card">
+          <div>
+            <div class="project-header">
+              <span class="project-title">Property Advertisement Portal</span>
+              <span class="project-cat-badge">Full Stack</span>
+            </div>
+            <div class="project-links">
+              <a href="https://propertyadvatisment.netlify.app/" target="_blank" class="link-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Live App (Netlify)
+              </a>
+              <a href="https://github.com/SohailKhan-313" target="_blank" class="link-pill github">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                GitHub
+              </a>
+            </div>
+            <p class="project-desc">
+              Real estate listing platform connecting buyers, sellers, and agents with interactive discovery.
+            </p>
+            <ul class="project-bullets">
+              <li>Property filtering by location, price, and type; seller dashboard with direct inquiries.</li>
+              <li>Live in production on Netlify with relational database schema and responsive grid UI.</li>
+            </ul>
+          </div>
+          <div class="project-tags">
+            <span class="tag-badge">Laravel</span>
+            <span class="tag-badge">PHP</span>
+            <span class="tag-badge">React</span>
+            <span class="tag-badge">MySQL</span>
+            <span class="tag-badge">Netlify</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Bottom: Education & Languages/Methodologies -->
+    <div class="bottom-grid">
+      <div class="info-card">
+        <div class="info-card-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+          Education &amp; Academic Background
+        </div>
+        <p><strong>Bachelor of Science in Computer Science / IT Foundation</strong></p>
+        <p style="color: #64748b; font-size: 7.4pt; margin-top: 2px;">
+          Strong theoretical and practical background in Object-Oriented Programming (OOP), Relational Database Management Systems (RDBMS), Data Structures, and Web Software Engineering.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          Languages &amp; Development Methodology
+        </div>
+        <div class="lang-row">
+          <span class="lang-chip"><strong>English:</strong> Professional</span>
+          <span class="lang-chip"><strong>Urdu:</strong> Native / Fluent</span>
+          <span class="lang-chip"><strong>Pashto:</strong> Native</span>
+        </div>
+        <p style="color: #64748b; font-size: 7.3pt; margin-top: 4px;">
+          Methodology: Agile Sprints, Clean MVC Architecture, Git Feature Branching, Code Reviews &amp; Continuous Cloud Deployments.
+        </p>
+      </div>
+    </div>
+
+    <!-- Page 2 Footer -->
+    <div class="cv-footer">
+      Sohail Khan • Full-Stack Developer • Verified Portfolio: https://my-website-sk-8b08.vercel.app/ • GitHub: https://github.com/SohailKhan-313
+    </div>
+  </div>
+
+</body>
+</html>

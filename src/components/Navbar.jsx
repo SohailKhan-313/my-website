@@ -83,6 +83,19 @@ export const Navbar = ({ personal, theme, toggleTheme }) => {
             <Icon name={theme === 'dark' ? 'sun' : 'moon'} size={18} />
           </button>
 
+          <a
+            href={personal.resumeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-secondary nav-cta-btn"
+            style={{ padding: '0.55rem 1rem', fontSize: '0.85rem' }}
+            download="Sohail_Khan_CV.pdf"
+            title="Download CV"
+          >
+            <Icon name="download" size={16} />
+            CV
+          </a>
+
           <a href="#contact" className="btn btn-primary nav-cta-btn" style={{ padding: '0.55rem 1.25rem', fontSize: '0.88rem' }}>
             Get in Touch
           </a>
@@ -111,6 +124,18 @@ export const Navbar = ({ personal, theme, toggleTheme }) => {
             {link.label}
           </a>
         ))}
+        <a
+          href={personal.resumeUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-secondary"
+          download="Sohail_Khan_CV.pdf"
+          onClick={() => setMobileMenuOpen(false)}
+          style={{ width: '100%', marginTop: '0.75rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}
+        >
+          <Icon name="download" size={18} />
+          Download CV (PDF)
+        </a>
         <a
           href="#contact"
           className="btn btn-primary"
