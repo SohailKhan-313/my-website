@@ -26,7 +26,7 @@ export const portfolioData = {
     yearsOfExperience: 2,
     headlineHighlights: [
       "Specialized in Laravel (PHP), MySQL & MERN Stack (React, Node, Express, MongoDB)",
-      "Engineered & deployed production systems including Hospital Management (HMS) & School Portal on Railway",
+      "Engineered & deployed production systems including Hospital Management (HMS), RMS & School Portal on Railway",
       "Focused on clean MVC architecture, secure RESTful APIs, and responsive user interfaces"
     ],
     bio: [
@@ -210,21 +210,22 @@ export const portfolioData = {
     },
     {
       id: "restaurant-management",
-      title: "Restaurant Management System",
+      title: "Restaurant Management System (RMS)",
       category: "Laravel & PHP",
       subtitle: "All-in-one platform managing restaurant tables, digital food menus, kitchen orders, and bills.",
       description: "Designed a centralized restaurant operating system providing digital menu management, table reservations, live kitchen order tickets, and customer billing.",
-      impact: "Streamlines dining room turnover and order accuracy with clear status tracking.",
+      impact: "Live in production on Railway cloud streamlining dining room turnover and order accuracy with clear status tracking.",
       image: "/images/project-analytics.jpg",
-      tags: ["Laravel", "PHP", "MySQL", "JavaScript", "REST APIs"],
-      liveUrl: "https://github.com/SohailKhan-313",
+      tags: ["Laravel", "PHP", "MySQL", "JavaScript", "Railway Cloud", "REST APIs"],
+      liveUrl: "https://rms-production-4975.up.railway.app",
       githubUrl: "https://github.com/SohailKhan-313",
       featured: true,
       features: [
         "Digital menu management with dish categories and pricing",
         "Table reservation system and seating status tracker",
         "Order generation, bill calculation, and invoice printing",
-        "Admin dashboard for sales and inventory monitoring"
+        "Admin dashboard for sales and inventory monitoring",
+        "Live production deployment hosted on Railway Cloud"
       ]
     },
     {
@@ -233,17 +234,18 @@ export const portfolioData = {
       category: "MERN Stack",
       subtitle: "Minimalist, distraction-free digital notepad with categorization, tags, and search.",
       description: "Created an agile notes application offering instant text note creation, category sorting, search-as-you-type, and persistent data storage.",
-      impact: "Provides a clean, lightweight personal productivity workspace with zero clutter.",
+      impact: "Live in production on Vercel providing a clean, lightweight personal productivity workspace with zero clutter.",
       image: "/images/project-ai.jpg",
-      tags: ["React", "Node.js", "Express", "MongoDB", "CSS"],
-      liveUrl: "https://github.com/SohailKhan-313",
+      tags: ["React", "Node.js", "Express", "MongoDB", "CSS", "Vercel"],
+      liveUrl: "https://notes-app-mocha-gamma.vercel.app/",
       githubUrl: "https://github.com/SohailKhan-313",
       featured: true,
       features: [
         "Instant note creation, editing, and deletion (CRUD)",
         "Live keyword search and category tag filtering",
         "Responsive minimalist UI designed for fast capture",
-        "Secure backend storage and RESTful endpoints"
+        "Secure backend storage and RESTful endpoints",
+        "Live production deployment hosted on Vercel"
       ]
     }
   ],
@@ -260,10 +262,10 @@ export const portfolioData = {
       type: "Full-Stack Engineer",
       description: "Designing, building, and deploying real-world web applications for clients and personal initiatives.",
       achievements: [
-        "Architected and deployed production systems including Hospital Management (HMS) and School Portal live on Railway Cloud with role-based portal access.",
-        "Built responsive, modern web applications including a live Weather app (Netlify), School Management System, Property Advertisement portal, and Restaurant system.",
+        "Architected and deployed production systems including Hospital Management (HMS), Restaurant Management (RMS), and School Portal live on Railway Cloud with role-based portal access.",
+        "Built responsive, modern web applications including a live Weather app (Netlify), School Management System, Notes App (Vercel), Property Advertisement portal, and RMS.",
         "Constructed clean, secure RESTful APIs using Laravel (PHP) and Node.js/Express, integrated with MySQL and MongoDB.",
-        "Maintained complete codebases using Git version control and handled cloud deployments on Railway and Netlify."
+        "Maintained complete codebases using Git version control and handled cloud deployments on Railway, Vercel, and Netlify."
       ],
       technologies: ["Laravel", "PHP", "React", "Node.js", "MySQL", "MongoDB", "Tailwind CSS", "Git"]
     }
@@ -313,7 +315,7 @@ export const portfolioData = {
     },
     {
       question: "Can I inspect the live demos and code of your projects?",
-      answer: "Absolutely! The Hospital Management System (HMS) and School Management System are live on Railway, the Weather App is live on Netlify, and the repositories are accessible on my GitHub profile."
+      answer: "Absolutely! The Hospital Management System (HMS), Restaurant Management System (RMS), and School Management System are live on Railway, the Modern Notes App is live on Vercel, the Weather App is live on Netlify, and all repositories are accessible on my GitHub profile."
     }
   ]
 };
